@@ -1,0 +1,35 @@
+/////////////////////////////////////////
+// FOOTER
+.footer {
+    height: auto;
+    text-align: center;
+    font-size: $font-size;
+    text-transform: capitalize;
+
+    // FOOTER CONTENT
+    &-content {
+        padding: 5rem 0;
+    }
+
+    // FOOTER PARAGRAPH
+    &-content-paragraph {
+        font-size: .5em;
+    }
+
+    // FOOTER COPYRIGHT
+    &-copyright {}
+
+    // FOOTER COPYRIGHT PARAGRAPH
+    &-copyright-paragraph {
+        font-size: .1em;
+        padding: 2rem;
+
+        // FOOTER COPYRIGHT PARAGRAPH SVG
+        & svg {
+            fill: white;
+            width: 2rem;
+            height: 3rem;
+            vertical-align: middle;
+        }
+    }
+}

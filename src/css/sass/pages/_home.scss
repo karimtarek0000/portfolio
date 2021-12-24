@@ -1,0 +1,933 @@
+/////////////////////////////
+// SECTION MYSKILLS
+.section-myskills {
+  margin-bottom: $margin-bottom-section-big;
+  height: auto;
+
+  // RESPONSIVE
+  @include respond(tablet-p) {
+    margin-bottom: $margin-bottom-section-small;
+  }
+
+  // MY SKILLS
+  .myskills {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-transform: capitalize;
+    position: relative;
+    background-color: transparent;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    // MY SKILLS HEADING
+    &__heading {
+      height: 65rem;
+      background-color: $color-secondary;
+      box-shadow: $box-shadow;
+      align-self: center;
+      text-align: center;
+      font-size: $font-size;
+      position: absolute;
+      display: block;
+      width: 100%;
+      left: -25rem;
+      overflow: hidden;
+
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        position: static;
+      }
+
+      @include respond(tablet-p) {
+        position: relative;
+        top: 0;
+        left: 0;
+        height: $height-head-mobile;
+        width: 60%;
+        margin-bottom: $margin-bottom-section-mediumscreen;
+        font-size: 3rem;
+        align-self: center;
+      }
+
+      @include respond(phone) {
+        align-self: flex-start;
+      }
+
+      // MY SKILLS HEADING::AFTER
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        background-color: inherit;
+        width: 50%;
+        height: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 37.3rem;
+        box-shadow: $box-shadow;
+        z-index: 2;
+
+        // RESPONSIVE
+        @include respond(tablet-l) {
+          width: 40%;
+          left: 6.3rem;
+        }
+
+        @include respond(tablet-p) {
+          left: 50%;
+          transform: translate(-50%, -50%);
+          width: 75%;
+          height: 75%;
+        }
+      }
+    }
+
+    // MY SKILLS HEAD
+    &__head {
+      position: absolute;
+      display: block;
+      font-size: inherit;
+      width: 100%;
+      top: 50%;
+      left: -14rem;
+      transform: translateY(-50%);
+      color: $color-font-fourth;
+      z-index: 3;
+
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        position: relative;
+        @include translate(50%);
+        font-size: 8.7rem;
+      }
+
+      @include respond(tablet-p) {
+        position: absolute;
+        font-size: 4.2rem;
+      }
+    }
+
+    // MY SKILLS TEXTBOX
+    &__textbox {
+      display: flex;
+      justify-content: center;
+      flex: 0 0 75rem;
+      background-color: $color-primary;
+      align-self: stretch;
+      position: relative;
+      border: 1px solid $color-border;
+      text-align: center;
+      z-index: 4;
+
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        flex: 0 0 60rem;
+      }
+
+      @include respond(tablet-p) {
+        flex: 1 0 80%;
+      }
+    }
+
+    // MT SKILLS LANGUAGE
+    &__language {
+      background-color: $color-secondary;
+      color: $color-font-primary;
+      flex: 2 0 0;
+      box-shadow: $box-shadow;
+    }
+
+    // MY SKILLS LANGUSGE ITEM
+    &__language-item {
+      margin: 2rem 0 3rem;
+      font-size: $font-size-small;
+      height: 1.8rem;
+      color: currentColor;
+    }
+
+    //MY SKILLS PROGRESS
+    &__progress {
+      flex: 3 0 0;
+      margin: 0 1rem;
+    }
+
+    &__progress-box {
+      margin: 2.3rem 0;
+      height: 2.5rem;
+    }
+
+    // MY SKILLS PROGRESS ITEM
+    &__progress-item {
+      background-color: $color-secondary;
+      flex: 0 0 80%;
+      height: 1rem;
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    // MY SKILLS PROGRESS BAR
+    &__progress-bar {
+      display: block;
+      width: 0;
+      height: 100%;
+      background-color: $color-progress;
+    }
+
+    // MY SKILLS PROGRESS PRECENTAGE
+    &__progress-precentage {
+      flex: 1 0 0;
+      font-size: $font-size-small;
+      color: $color-font-fourth;
+      display: none;
+    }
+  }
+}
+
+/////////////////////////////
+// SECTION PORTFOLIO
+.section-portfolio {
+  height: 100vh;
+  margin: $margin-bottom-section-small 0;
+  overflow: hidden;
+
+  // RESPONSIVE
+  @include respond(tablet-p) {
+    height: auto;
+  }
+
+  // SECTION PORTFOLIO HEADING
+  &-heading {
+    width: 50%;
+    height: 40vh;
+    line-height: 40rem;
+    background-color: $color-secondary;
+    box-shadow: $box-shadow;
+    font-size: $font-size;
+    text-transform: capitalize;
+    position: relative;
+
+    // RESPONSIVE
+    @include respond(tablet-l) {
+      font-size: 8.4rem;
+    }
+
+    // RESPNSIVE
+    @include respond(tablet-p) {
+      font-size: 4.2rem;
+      height: 20rem;
+    }
+
+    // SECTION PORTFOLIO HEADING AFTER
+    &::after {
+      content: "";
+      position: absolute;
+      width: 80%;
+      height: 60%;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: inherit;
+      box-shadow: inherit;
+    }
+  }
+
+  // SECTION PORTFOLIO HEAD
+  &-head {
+    font-size: inherit;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    color: $color-font-fourth;
+    z-index: 1;
+
+    // RESPONSIVE
+    @include respond(tablet-l) {
+      right: 0;
+    }
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      right: 10%;
+    }
+  }
+
+  // SECTION PORTFOLIO SLIDEBOX
+  &-sliderbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 60vh; //60rem;
+    max-width: 100%;
+    background-color: $color-secondary;
+    box-shadow: $box-shadow;
+    z-index: 2;
+
+    @include respond(tablet-p) {
+      height: auto;
+      padding: 1rem;
+    }
+  }
+
+  // SECTION PORTFOLIO SLIDER
+  &-slider {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 5px;
+    padding: 0.5rem;
+    border: 1px solid white;
+
+    // RESPONSIVE
+    @include respond(tablet-l) {
+      width: 60vw;
+    }
+    @include respond(tablet-p) {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  // SECTION PORTFOLIO SLIDER INNER
+  &-slider-inner {
+    position: relative;
+    height: 100%;
+  }
+
+  // SECTION PORTFOLIO IMAGE
+  &-box {
+    overflow: hidden;
+    height: 100%;
+  }
+
+  &-image {
+    position: relative;
+    height: 100%;
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      height: 270px;
+    }
+    @include respond(phone) {
+      height: 200px;
+    }
+    // IMG
+    & img {
+      display: block;
+      max-width: 100%;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &-overlay {
+    position: absolute;
+    font-size: $font-size-small;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba($color-primary, 0.9);
+    bottom: 0;
+    left: 0;
+    text-transform: capitalize;
+    z-index: 20;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-overlay-heading {
+    font-size: 1.6em;
+    margin-right: 0.3em;
+    margin-bottom: 0.5em;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 4rem;
+    color: $color-font-fourth;
+    font-weight: 300;
+
+    @include respond(phone) {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+  }
+
+  &-overlay-btn:link,
+  &-overlay-btn:visited {
+    text-decoration: none;
+    background-color: $color-secondary;
+    color: $color-font-fourth;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border: 1px solid rgba($color-font-fourth, 0.5);
+    margin-inline-start: 10px;
+    padding: 0.7rem 2rem;
+    transition: all 0.5s ease;
+
+    @media only screen and (hover: hover) {
+      &:hover {
+        background-color: lighten($color-secondary, 3%);
+      }
+    }
+
+    @include respond(phone) {
+      font-size: 1.6rem;
+    }
+  }
+
+  // SECTION PORTFOLIO CONTROL
+  &-control {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      width: 70%;
+    }
+  }
+
+  // SECTION PORTFOLIO ARROW
+  &-arrow {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    & > * {
+      width: 5rem;
+      height: 10rem;
+      fill: $color-font-fourth;
+      background-color: $color-primary;
+      border-radius: 5px;
+      transition: all 0.5s ease;
+
+      &:hover {
+        background-color: $color-secondary;
+      }
+    }
+
+    // SECTION PORTFOLIO ARROW NEXT
+    &--next {
+      right: -10rem;
+    }
+
+    // SECTION PORTFOLIO ARROW PREV
+    &--prev {
+      left: -10rem;
+    }
+  }
+}
+
+/////////////////////////////
+// SECTION SERVICES
+.section-services {
+  height: 100vh;
+  margin: $margin-bottom-section-small 0;
+  display: flex;
+  align-items: center;
+
+  & > * {
+    width: 100%;
+  }
+
+  // RESPONSIVE
+  @include respond(phone) {
+    height: auto;
+  }
+
+  // SECTION SERVICES SERVICES
+  .services {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-primary;
+    text-transform: capitalize;
+    height: 100vh;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      height: auto;
+    }
+
+    // SECTION HEADING BOX
+    &__heading-box {
+      position: relative;
+      width: 50%;
+      background-color: $color-secondary;
+      font-size: $font-size;
+      color: $color-font-fourth;
+      padding: 1rem 0 1rem 6rem;
+      margin-bottom: 3rem;
+      box-shadow: $box-shadow;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        align-self: center;
+        width: 60%;
+        height: $height-head-mobile;
+        padding: 0;
+        margin-bottom: $margin-bottom-section-mediumscreen;
+      }
+
+      @include respond(phone) {
+        align-self: flex-start;
+      }
+
+      // SECTION HEADING AFTER
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        background-color: inherit;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        box-shadow: inherit;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+          opacity: 1;
+          width: 75%;
+          height: 75%;
+          @include translate(50%);
+        }
+      }
+
+      // SECTION HEADING CLASS ACTIVE
+      &--active::after {
+        animation: moveleft 1s ease-in-out forwards;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+          animation-play-state: paused;
+        }
+      }
+    }
+
+    // SECTION SERVICES HEAD
+    &__head {
+      font-size: inherit;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        position: absolute;
+        z-index: 3;
+        @include translate(50%);
+        font-size: 4.2rem;
+      }
+    }
+
+    // SECTION SERVICES BOX
+    &__box {
+      flex: 1 0 0;
+      display: none;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        display: block;
+      }
+    }
+    // SECTION SERVICES CATEGORY
+    &--category {
+      display: flex;
+      height: calc(80vh / 5);
+
+      // SECTION SERVICES CATEGORY NOT: LAST CHILD
+      &:not(:last-child) {
+        margin-bottom: 5vh;
+      }
+      // RESPONSIVE
+      @include respond(phone) {
+        height: 10rem;
+      }
+    }
+
+    // SECTION SERVICES ICON
+    &__icon {
+      width: 12.2rem;
+      background-color: $color-secondary;
+      padding: 1rem;
+      flex: 0 1 20%;
+      margin-right: auto;
+      box-shadow: $box-shadow;
+
+      & > * {
+        fill: darken($color-third, 20%);
+      }
+    }
+
+    // SECTION SERVICES BOXTEXT
+    &__boxtext {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: $color-secondary;
+      padding: 1rem;
+      flex: 0 1 70%;
+      font-size: 1.5rem;
+      overflow: hidden;
+      box-shadow: $box-shadow;
+
+      // RESPONDIVE
+      @include respond(tablet-p) {
+        justify-content: flex-start;
+      }
+    }
+
+    // SECTION SERVICES TEXT
+    &__text {
+      font-size: 2rem;
+      line-height: 23px;
+      text-transform: lowercase;
+      font-weight: 300;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+/////////////////////////////
+// SECTION ABOUT ME
+.section-about-me {
+  font-size: $font-size;
+  margin-bottom: $margin-bottom-section-small;
+
+  // RESPONSIVE
+  @include respond(tablet-p) {
+    height: auto !important;
+    overflow: hidden;
+  }
+
+  // SECTION ABOUT ME HEADING
+  &-heading {
+    width: 60rem;
+    height: 40rem;
+    position: relative;
+    background-color: $color-secondary;
+    box-shadow: $box-shadow;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      width: 30rem;
+      font-size: 4.2rem;
+      height: 20rem;
+    }
+  }
+
+  // SECTION ABOUT ME HEAD
+  &-head {
+    position: absolute;
+    top: 40%;
+    right: -14rem;
+    transform: translateY(-50%);
+    font-size: inherit;
+    color: $color-font-fourth;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      top: 50%;
+      right: -5.75rem;
+    }
+  }
+
+  // SECTION ABOUT ME CONTENT
+  &-content {
+    max-width: 100%;
+    height: auto;
+    background-color: $color-secondary;
+    box-shadow: $box-shadow;
+    position: relative;
+    top: -12.8rem;
+    opacity: 0.8;
+    padding: 10px;
+    overflow: hidden;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      top: -1rem;
+    }
+  }
+
+  // SECTION ABOUT ME PARAGRAPH
+  &-paragraph {
+    font-size: 0.3em;
+    font-weight: 300;
+    padding-top: 14rem;
+    line-height: $line-height;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      padding-top: 1rem;
+    }
+
+    &::first-letter {
+      text-transform: capitalize;
+    }
+  }
+
+  // CONTACT ME BTN
+  &-btn:link,
+  &-btn:visited {
+    text-decoration: none;
+    display: block;
+    font-size: 0.2em;
+    color: $color-secondary;
+    background-color: $color-font-fourth;
+    padding: 1em 2em;
+    float: right;
+    margin-top: 0.9em;
+    margin-inline-start: 1rem;
+    transition: all 0.5s;
+
+    // BTN HOVER AND BTN ACTIVE
+    &:hover {
+      background-color: $color-secondary;
+      color: $color-font-fourth;
+
+      // RESPONSIVE
+      @include respond(device) {
+        background-color: $color-font-fourth;
+        color: $color-secondary;
+      }
+    }
+  }
+}
+
+/////////////////////////////
+// SECTION CONTACT ME
+.section-contact-me {
+  height: auto;
+  background-color: $color-secondary;
+  box-shadow: $box-shadow;
+  font-size: 3rem;
+  text-transform: capitalize;
+  color: $color-font-fourth;
+
+  // RESPONSIVE
+  @include respond(phone) {
+    height: auto;
+  }
+
+  // CONTAINER
+  .container {
+    height: 100%;
+  }
+
+  // SECTION CONTACT ME BOX
+  &-box {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  // SECTION CONTACT ME SOCIAL
+  &-social {
+    height: 100%;
+    fill: white;
+    align-self: center;
+    flex: 1 1 40%;
+
+    // RESPONSIVE
+    @include respond(phone) {
+      flex: 1 1 100%;
+      text-align: center;
+    }
+  }
+
+  // SECTION CONTACT ME LOGO
+  &-logo {
+    margin-top: 20%;
+
+    // SECTION CONTACT ME LOGO A SVG
+    & > a svg {
+      fill: inherit;
+      width: 14rem;
+      margin-bottom: 20px;
+
+      //
+      @media (max-width: 600px) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // SECTION CONTACT ME ICON
+  &-icon {
+    height: 10rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    // RESPONSIVE
+    @include respond(phone) {
+      justify-content: center;
+    }
+
+    // SECTION CONTACT ME ICON A
+    & a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      transition: all 0.5s ease;
+
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+
+    // SECTION CONTACT ME ICON A SVG
+    & > a svg {
+      fill: inherit;
+      width: 4rem;
+      height: 3rem;
+
+      //
+      @media (max-width: 600px) {
+        width: 6rem;
+        height: 5rem;
+      }
+    }
+  }
+  // SECTION CONTACT ME ICON :HOVER
+  &-icon a:hover {
+    background-color: $color-third;
+    border-radius: 50%;
+    width: 5rem;
+    height: 5rem;
+    text-align: center;
+    line-height: 5.7rem;
+
+    // RESPONSIVE
+    @include respond(device) {
+      background-color: $color-third;
+      border-radius: 50%;
+      width: 5rem;
+      height: 5rem;
+      text-align: center;
+      line-height: 5.7rem;
+    }
+  }
+
+  // SECTION CONTACT ME ICON A:HOVER SVG
+  &-icon a:hover svg {
+    fill: $color-primary;
+
+    // RESPONSIVE
+    @include respond(device) {
+      fill: $color-primary;
+    }
+  }
+
+  // SECTION CONTACT ME FORM
+  &-form {
+    flex: 1 1 60%;
+
+    // RESPONSIVE
+    @include respond(phone) {
+      flex: 1 1 100%;
+    }
+
+    // SECTION CONTACT ME FORM INPUT
+    & input {
+      font-family: lato;
+    }
+
+    // FORM INPUT AND TEXTAREA
+    & input[type="text"],
+    textarea {
+      width: 60%;
+      border: none;
+      color: inherit;
+      outline-color: darken($color-font-fourth, 20%);
+      padding: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      background-color: $color-primary;
+      resize: none;
+      border-radius: 5px;
+      text-transform: inherit;
+      font-family: inherit;
+
+      // RESPONSIVE
+      @include respond(phone) {
+        width: 100%;
+      }
+    }
+
+    // FORM INPUT TEXT
+    & input[type="text"] {
+      margin-bottom: 1rem;
+    }
+
+    // FORM TEXTAREA
+    & textarea {
+      height: 20rem;
+    }
+
+    // FORM INPUT SUBMIT
+    & input[type="submit"] {
+      width: 15rem;
+      outline: none;
+      border: none;
+      padding: 1rem;
+      color: inherit;
+      background-color: $color-primary;
+      text-transform: inherit;
+      border-radius: 5px;
+      margin-bottom: 0.5rem;
+      transition: all 0.5s ease;
+
+      // RESPONSIVE
+      @include respond(phone) {
+        width: 20rem;
+        margin-top: 1rem;
+      }
+    }
+
+    // FORM INPUT HOVER
+    & input[type="submit"]:hover {
+      background-color: $color-font-fourth;
+      letter-spacing: 1.5px;
+      color: $color-secondary;
+      font-weight: inherit;
+      cursor: pointer;
+
+      // RESPONSIVE
+      @include respond(device) {
+        letter-spacing: 0;
+      }
+    }
+
+    & input[type="submit"]:active {
+      transform: translateY(3px);
+    }
+  }
+
+  // FORM MESSAGE
+  &-form-message {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  // SECTION CONTACT ME FORM HEADING
+  &-form-heading {
+    font-size: 1em;
+    color: currentColor;
+    padding: 0.5em 0;
+  }
+}

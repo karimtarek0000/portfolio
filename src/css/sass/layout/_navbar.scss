@@ -1,0 +1,197 @@
+/////////////////////////////
+// NAVBAR
+nav {
+  // NAV
+  .nav {
+    display: flex;
+    align-items: center;
+    background-color: $color-primary;
+    padding: 3.8rem 0 3rem;
+    position: relative;
+
+    // RESPONSIVE
+    @include respond(tablet-p) {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 1px 0 0;
+    }
+
+    // NAV BUTTON
+    &__button {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      top: 16px;
+      right: 0;
+      visibility: hidden;
+      padding: 2.5px 2px;
+      overflow: hidden;
+      cursor: pointer;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        visibility: visible;
+      }
+
+      // NAV BUTTON ICON
+      &-icon {
+        position: absolute;
+        display: block;
+        width: 90%;
+        height: 3px;
+        background-color: $color-font-fourth;
+        border-radius: 100px 0 0 100px;
+        transition: all 0.3s;
+
+        // NAV BUTTON ICON AFTER AND BEFORE
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          background-color: $color-font-fourth;
+          height: 100%;
+          right: 0;
+          border-radius: inherit;
+          transform-origin: center;
+          transition: all 0.3s;
+        }
+
+        &::before {
+          width: 70%;
+          top: 10px;
+        }
+
+        &::after {
+          width: 50%;
+          top: 20px;
+        }
+
+        // NAV BUTTON ICON ACTIVE => TOOGLE
+        &--active {
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: transparent;
+          transition: all 0.3s;
+
+          &::before,
+          &::after {
+            top: 0;
+            width: 100%;
+            border-radius: 200px;
+            transition: all 0.3s;
+          }
+
+          &::before {
+            transform: rotate(135deg);
+          }
+
+          &::after {
+            transform: rotate(-135deg);
+          }
+        }
+      }
+    }
+
+    // NAV BRAND
+    &__brand {
+      margin-right: auto;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        margin-right: 0;
+      }
+    }
+
+    // NAV LOGO
+    &__logo {
+      fill: $color-fourth;
+      width: 6.2rem;
+      height: 10rem;
+    }
+
+    // NAV NAV
+    &__nav {
+      // flex: 0 0 60%;
+      // text-align: center;
+
+      // RESPONSIVE
+      // @include respond (tablet-l) {
+      //     flex: 0 1 66%;
+      // }
+
+      @include respond(proplem) {
+        display: flex !important;
+        flex: 0 1 66%;
+        text-align: center;
+      }
+
+      @include respond(tablet-p) {
+        flex-direction: column;
+        text-align: left;
+        display: none;
+        height: 100%;
+      }
+    }
+
+    // NAV ITEM
+    &__item {
+      font-size: 1.7rem;
+      flex: 1 0 0;
+      text-transform: capitalize;
+      font-weight: 300;
+
+      @include respond(tablet-l) {
+        font-size: 1.5rem;
+        flex: 1 1 0;
+      }
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        font-size: 3rem;
+
+        &:first-child {
+          margin-top: 2rem;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+
+        // RESPONSIVE
+        @include respond(tablet-p) {
+          margin-right: 0;
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    // NAV ITEM LINK
+    &__link {
+      color: $color-font-secondary;
+      display: block;
+      padding: 1.4rem 1.2rem;
+      border-radius: 4px;
+      transition: all 0.5s;
+
+      // NAV ITEM:HOVER
+      &:hover,
+      &:active {
+        background-color: $color-secondary;
+      }
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        border-radius: 0;
+      }
+
+      // NAV LINK ACTIVE
+      &--active {
+        background-color: $color-secondary;
+        color: $color-font-primary;
+      }
+    }
+  }
+}

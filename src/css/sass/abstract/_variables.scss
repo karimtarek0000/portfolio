@@ -1,0 +1,55 @@
+////////////////////
+// VARIABLE COLOR
+$color-primary: #121212;
+$color-secondary: lighten(#121212, 3%);
+$color-third: #dcebeb;
+$color-fourth: #ffffff;
+
+////////////////////
+// VARIABLE COLOR FONT
+$color-font-primary: #ffffff;
+$color-font-secondary: rgba(255, 255, 255, 0.363);
+$color-font-third: #ffa500;
+$color-font-fourth: #e8e1d5;
+
+////////////////////
+// VARIABLE FONT WEIGHT
+$font-weight-normal: 300;
+$font-weight-medium: 400;
+$font-weight-bold: 900;
+
+////////////////////
+// VARIABLE COLOR PROGRESS
+$color-progress: #7eabab;
+
+////////////////////
+// VARIABLE COLOR BORDER
+$color-border: #707070;
+
+////////////////////
+// VARIABLE BOX SHADOW
+$box-shadow: 0 0 5.1rem rgba($color-primary, 0.8);
+
+////////////////////
+// VARIABLE MARGIN
+$margin-bottom-section-big: 22.5rem;
+$margin-bottom-section-small: 15.5rem;
+$margin-bottom-section-mediumscreen: 10px;
+
+////////////////////
+// VARIABLE FONT SIZE
+$font-size: 9rem;
+$font-size-small: 1.5rem;
+
+////////////////////
+// VARIABLE HEAD MOBILE
+$height-head-mobile: 15rem;
+
+$line-height: 2em;
+
+@mixin lineHeight($var, $val) {
+  line-height: #{$var};
+  @media only screen and (max-width: 37.5em) {
+    line-height: #{$var + $val};
+  }
+}

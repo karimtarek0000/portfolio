@@ -1,0 +1,27 @@
+////////////////////////////////////
+// BUTTON SCROOL TOP
+.button-scrollup {
+    position: fixed;
+    fill: $color-third;
+    background: $color-secondary;
+    width: 5rem;
+    height: 5rem;
+    bottom: 1rem;
+    right: 1rem;
+    border-radius: 5px;
+    border: 1px solid darken($color-third, 40%);
+    overflow: hidden;
+    transition: all .5s;
+    transform: rotate(-90deg);
+    z-index: 2000;
+    display: none;
+    cursor: pointer;
+
+    // BUTTON SCROLL UP :HOVER
+    &:hover {
+        background-color: $color-third;
+        border-color: transparent;
+        fill: $color-secondary
+    }
+
+}

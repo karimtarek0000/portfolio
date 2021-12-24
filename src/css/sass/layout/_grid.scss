@@ -1,0 +1,9 @@
+.container {
+    max-width: 120rem;
+    margin: auto;
+
+    // RESPONSIVE
+    @include respond (tablet-l) {
+        padding: 1rem;
+    }
+}

@@ -1,0 +1,202 @@
+/////////////////////////////
+// HEADER
+header {
+  // overflow-y: hidden;
+  overflow: hidden;
+  margin-bottom: $margin-bottom-section-big;
+
+  // RESPONSIVE
+  @include respond(tablet-p) {
+    margin-bottom: $margin-bottom-section-small;
+  }
+
+  // HEADER
+  .header {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    // HEADER BOXES
+    &__boxes {
+      width: 100%;
+      height: 100vh;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      left: 0;
+    }
+
+    // HEADER BOX 1
+    &__box-1 {
+      width: 65.7rem;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $color-secondary;
+      animation: move-1 1s ease-in-out backwards;
+      z-index: 1;
+
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        width: 50%;
+      }
+
+      @include respond(tablet-p) {
+        width: 40%;
+      }
+    }
+
+    // HEADER BOX 2
+    &__box-2 {
+      position: absolute;
+      display: block;
+      background-color: $color-secondary;
+      box-shadow: $box-shadow;
+      width: 50%;
+      height: 80%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 22.65rem;
+      z-index: 2;
+      animation: move-2 1s ease-in-out 0.3s backwards;
+
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        width: 50%;
+        left: 11.65rem;
+      }
+
+      @include respond(tablet-p) {
+        width: 40%;
+        left: 9.65rem;
+      }
+    }
+
+    // HEADER BOX 3
+    &__box-3 {
+      position: absolute;
+      display: block;
+      background-color: $color-secondary;
+      box-shadow: $box-shadow;
+      width: 47%;
+      height: 60%;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 45.3rem;
+      z-index: 3;
+      animation: move-2 1s ease-in-out 0.5s backwards;
+      // RESPONSIVE
+      @include respond(tablet-l) {
+        width: 50%;
+        left: 27.3rem;
+      }
+
+      @include respond(tablet-p) {
+        width: 40%;
+        left: 23.3rem;
+      }
+
+      @include respond(phone) {
+        left: 21.3rem;
+      }
+    }
+
+    // HEADER TEXT
+    &__text {
+      position: relative;
+      font-size: 7rem;
+      line-height: 10rem;
+      padding: 4rem 1rem;
+      text-transform: capitalize;
+      font-weight: $font-weight-normal;
+      color: $color-font-fourth;
+      z-index: 4;
+      left: 30rem;
+      animation: opacity 1s 1.4s backwards;
+
+      // RESPONSIVE
+      @include respond(tablet-p) {
+        font-size: 5rem;
+        line-height: 9rem;
+        left: 11rem;
+        width: 60%;
+      }
+
+      @include respond(phone) {
+        font-size: 7rem;
+      }
+
+      // HEADER TEXT SPAN 1
+      &--1 {
+        font-weight: $font-weight-bold;
+        color: $color-font-primary;
+        font-size: 8rem;
+      }
+
+      // HEADER TEXT SPAN 2
+      &--2 {
+        color: $color-font-third;
+        font-weight: $font-weight-medium;
+      }
+    }
+
+    // BOXICON
+    &__boxicon {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+      z-index: 5;
+
+      // HEADER BOXICON BEFORE
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.5rem;
+        height: 100%;
+        top: -110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-third;
+        border-radius: 20rem;
+        animation: scaleTop 1s 2s ease backwards;
+      }
+
+      // HEADER BOXICON AFTER
+      &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0.5rem;
+        height: 100%;
+        bottom: -110%;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $color-third;
+        border-radius: 20rem;
+        animation: scaleBottom 1s 2s ease backwards;
+      }
+    }
+
+    // HEADER LINK
+    &__link {
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+
+    // HEADER ICON
+    &__icon {
+      fill: $color-third;
+      width: 4rem;
+      height: 4.5rem;
+      animation: opacity 1s 2.4s backwards;
+    }
+  }
+}

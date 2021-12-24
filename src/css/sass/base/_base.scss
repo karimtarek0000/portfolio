@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; // 10PX / 16PX = 62.5%
+  scrollbar-color: #3f4848 transparent;
+  scrollbar-width: 7px;
+  //
+  @include respond(tablet-l) {
+    // medium screen => 9px / 16px = 56.25%
+
+    font-size: 56.25%;
+  }
+
+  @include respond(tablet-p) {
+    // small screen => 8px / 16px = 50%
+
+    font-size: 50%;
+  }
+
+  @include respond(phone) {
+    // extra small screen => 5PX / 16PX = 31.25%
+
+    font-size: 45.75%;
+  }
+}
+
+body {
+  background-color: $color-primary;
+  color: $color-font-primary;
+  font-family: lato;
+  font-weight: 600;
+  //   overflow: hidden;
+
+  // RESPONSIVE
+  // @include respond(tablet-l) {
+  //     overflow-y: visible;
+  // }
+}
+
+///////////////////////////////////
+// SELECTION
+::selection {
+  background-color: lighten($color-secondary, 40%);
+}
+
+body::-webkit-scrollbar {
+  width: 7px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: $color-secondary;
+  border: 0.5px solid #7eabab79;
+}
+
+p,
+h1,
+h2,
+h3 {
+  user-select: none;
+}
