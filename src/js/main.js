@@ -191,21 +191,21 @@ $(function () {
   var status = true;
 
   // SETINTERVAL
-  setInterval(function () {
-    if (status) {
-      if ($(portImage).is(".active:last-child")) {
-        $(portBox).fadeOut(0).removeClass("active");
-        $(portImage).first().addClass("active").fadeIn();
-      } else {
-        $(portBox)
-          .fadeOut(0)
-          .removeClass("active")
-          .next()
-          .addClass("active")
-          .fadeIn();
-      }
-    }
-  }, 4000);
+  // setInterval(function () {
+  //   if (status) {
+  //     if ($(portImage).is(".active:last-child")) {
+  //       $(portBox).fadeOut(0).removeClass("active");
+  //       $(portImage).first().addClass("active").fadeIn();
+  //     } else {
+  //       $(portBox)
+  //         .fadeOut(0)
+  //         .removeClass("active")
+  //         .next()
+  //         .addClass("active")
+  //         .fadeIn();
+  //     }
+  //   }
+  // }, 4000);
 
   // SWITCH SETINTERVAL
   $(sliderInner).on({
