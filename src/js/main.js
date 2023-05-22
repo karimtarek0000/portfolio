@@ -190,7 +190,7 @@ $(function () {
 
   var status = true;
 
-  // SETINTERVAL
+  // // SETINTERVAL
   // setInterval(function () {
   //   if (status) {
   //     if ($(portImage).is(".active:last-child")) {
