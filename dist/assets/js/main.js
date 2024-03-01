@@ -90,7 +90,7 @@ $(function () {
   // START WINDOW SCROLL
   $(window).on("scroll", function () {
     // START ANIMATION SECTION MY SERVICES
-    if ($(this).scrollTop() >= myServices.offset().top) {
+    if ($(this).scrollTop() >= myServices.offset().top - 2) {
       $(".services__heading-box").addClass("services__heading-box--active");
 
       $(".services__box").delay(1000).fadeIn(1000);
